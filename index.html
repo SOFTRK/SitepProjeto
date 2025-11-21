@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozinha Fácil - Início</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="logo">Cozinha Fácil</div>
+    <nav class="menu">
+      <a href="index.html" class="ativo">Início</a>
+      <a href="receitas.html">Receitas</a>
+      <a href="nova-receita.html">Adicionar Receita</a>
+      <a href="login.html">Entrar</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo(a) ao Cozinha Fácil</h1>
+    <p>O seu portal fofo para descobrir, criar e compartilhar receitas deliciosas.</p>
+    <a href="receitas.html" class="cta">Explorar Receitas</a>
+  </section>
+
+  <section class="container">
+    <h2 class="sec-title">Categorias Populares</h2>
+    <div class="grid cat-grid">
+      <a href="receitas.html?cat=Sobremesa" class="cat-card">Sobremesas</a>
+      <a href="receitas.html?cat=Entrada" class="cat-card">Entradas</a>
+      <a href="receitas.html?cat=Principal" class="cat-card">Pratos Principais</a>
+      <a href="receitas.html?cat=Veg" class="cat-card">Receitas Veganas</a>
+    </div>
+  </section>
+
+  <section class="search-area">
+    <h2>Buscar Receitas</h2>
+    <input type="text" id="busca" placeholder="Digite o nome ou ingrediente..." />
+  </section>
+
+  <section class="grid" id="listaReceitas">
+    <!-- Renderizado via JS -->
+  </section>
+
+  <footer class="rodape">
+    <p>© 2025 Cozinha Fácil • Todos os direitos reservados</p>
+    <a href="/mnt/data/Documentação Site de Receitas.pdf" data-doc-link>Documentação do Projeto</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

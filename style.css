@@ -1,0 +1,111 @@
+/* =============================
+   STYLE.CSS — Versão Minimalista Inspirada em churchofjesuschrist.org
+   - Cores: Azuis profundos, neutros timeless.
+   - Tipografia: Serif para títulos (classic), Sans para corpo (modern).
+   - Layout: Flat, sem sombras, compacto, clean, muito espaço branco.
+   - Responsivo: Compacto em mobile.
+   ============================= */
+
+:root {
+  --bg: #ffffff; /* Branco clean */
+  --card: #ffffff;
+  --muted: #6b7280; /* Cinza neutro */
+  --accent: #0066cc; /* Azul principal */
+  --accent-2: #0099ff; /* Azul claro */
+  --success: #2dd4bf;
+  --danger: #ef4444;
+  --radius: 8px; /* Bordas suaves, mas mínimas */
+  --max-width: 1000px; /* Compacto */
+}
+
+/* ---------- Reset / Base ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Sans modern */
+  background: var(--bg);
+  color: #0f172a;
+  line-height: 1.4;
+  font-size: 0.95rem; /* Pequeno e lite */
+}
+h1, h2, h3 { font-family: Georgia, serif; /* Serif classic como McKay */ margin: 0 0 0.5rem; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: var(--accent); }
+button { font-family: inherit; }
+
+/* ---------- Container ---------- */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 10px; } /* Compacto */
+
+/* ---------- Header / Nav ---------- */
+header {
+  background: var(--accent);
+  color: white;
+  padding: 10px 0; /* Slim */
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand .logo { font-weight: bold; }
+.brand h1 { font-size: 1.1rem; margin: 0; }
+nav.main-nav { padding: 5px 0; }
+nav.main-nav a { margin-right: 12px; color: white; font-weight: 500; }
+nav.main-nav a:hover { text-decoration: underline; }
+
+/* ---------- Search / Hero ---------- */
+.search-area { padding: 10px 0; text-align: center; }
+.search-area h2 { margin-bottom: 5px; font-size: 1rem; }
+.search-box { display: flex; justify-content: center; gap: 5px; }
+.search-box input { width: 80%; padding: 8px; border-radius: var(--radius); border: 1px solid #e5e7eb; }
+.search-box button { padding: 8px 12px; border-radius: var(--radius); background: var(--accent); color: white; border: 0; cursor: pointer; }
+
+/* ---------- Grid / Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin: 10px 0; }
+.card { background: var(--card); border-radius: var(--radius); overflow: hidden; border: 1px solid #f3f4f6; /* Flat, sem sombra */ }
+.card img { height: 120px; object-fit: cover; background: #f3f4f6; }
+.card .card-content { padding: 10px; }
+.card h3 { margin: 0 0 4px; font-size: 1rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.card .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.card .tag { background: #f3f4f6; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; color: var(--muted); }
+.card a.cta { padding: 6px 10px; border-radius: var(--radius); background: var(--accent); color: white; }
+
+/* ---------- Recipe Details ---------- */
+.recipe-details { background: var(--card); padding: 10px; border-radius: var(--radius); max-width: var(--max-width); margin: 10px auto; border: 1px solid #f3f4f6; }
+.recipe-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.recipe-hero img { border-radius: var(--radius); height: 200px; object-fit: cover; }
+.recipe-body h2 { margin-top: 0; }
+.recipe-section { margin-top: 10px; }
+.recipe-section ul { padding-left: 15px; }
+.recipe-meta { display: flex; gap: 10px; color: var(--muted); margin-top: 8px; }
+.report-btn { padding: 8px 12px; border-radius: var(--radius); border: 1px solid var(--danger); color: var(--danger); cursor: pointer; }
+
+/* ---------- Forms ---------- */
+form { max-width: 500px; margin: 10px auto; background: var(--card); padding: 10px; border-radius: var(--radius); border: 1px solid #f3f4f6; }
+form label { display: block; margin-top: 8px; font-weight: 500; }
+form input, form textarea { width: 100%; padding: 8px; border-radius: var(--radius); border: 1px solid #e5e7eb; margin-top: 4px; }
+form button { margin-top: 10px; padding: 8px 12px; border-radius: var(--radius); background: var(--accent); color: white; border: 0; cursor: pointer; }
+
+/* ---------- Profile ---------- */
+.profile-header { display: flex; gap: 10px; align-items: center; }
+.profile-header .avatar { width: 60px; height: 60px; border-radius: var(--radius); background: #f3f4f6; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+.my-recipes { margin-top: 10px; }
+
+/* ---------- Utilities ---------- */
+.small { font-size: 0.85rem; color: var(--muted); }
+.center { text-align: center; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .recipe-hero { grid-template-columns: 1fr; }
+  .card img { height: 100px; }
+  .search-box input { width: 90%; }
+}
+
+@media (max-width: 520px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  nav.main-nav { display: flex; flex-wrap: wrap; gap: 5px; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Acessibilidade ---------- */
+:focus { outline: 2px solid var(--accent-2); outline-offset: 2px; }
